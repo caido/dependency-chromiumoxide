@@ -22,7 +22,9 @@ path = "tests/lib.rs"
 harness = true
 
 [dev-dependencies]
-reqwest = { version = "0.13", features = ["rustls"], default-features = false }
+reqwest = { version = "0.12", features = [
+  "rustls-tls",
+], default-features = false }
 tokio = { version = "1", features = ["rt", "fs", "process", "macros"] }
 
 [dependencies]
@@ -38,7 +40,7 @@ zip8 = { package = "zip", version = "8", default-features = false, features = [
   "deflate-flate2-zlib-rs",
 ], optional = true }
 tokio = { version = "1", features = ["fs", "io-util"] }
-reqwest = { version = "0.13", default-features = false, features = ["json"] }
+reqwest = { version = "0.12", default-features = false, features = ["json"] }
 
 [target.'cfg(target_os = "windows")'.dependencies]
 windows-version = "0.1"
@@ -46,5 +48,5 @@ windows-version = "0.1"
 [features]
 default = ["rustls", "zip8"]
 
-rustls = ["reqwest/rustls"]
+rustls = ["reqwest/rustls-tls-native-roots"]
 native-tls = ["reqwest/native-tls"]
