@@ -38,7 +38,7 @@ zip8 = { package = "zip", version = "8", default-features = false, features = [
     "deflate-flate2-zlib-rs",
 ], optional = true }
 tokio = { version = "1", features = ["fs", "io-util"] }
-reqwest = { version = "0.12", default-features = false, features = ["json"] }
+reqwest = { version = "0.13", default-features = false, features = ["json"] }
 
 [target.'cfg(target_os = "windows")'.dependencies]
 windows-version = "0.1"
