@@ -32,7 +32,7 @@ async fn verify_chromium_revision_available() {
 #[tokio::test]
 async fn find_chromium_revision_available() {
     let min = 1583927; // Enter the minimum revision
-    let max = 1586699; // Enter the maximum revision
+    let max = 1696874; // Enter the maximum revision
 
     let host = BrowserHost::current(BrowserKind::Chromium);
     'outer: for revision in (min..=max).rev() {

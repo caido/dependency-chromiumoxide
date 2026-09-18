@@ -34,10 +34,10 @@ directories = "6"
 serde = { version = "1", features = ["derive"] }
 tracing = "0.1"
 zip0 = { package = "zip", version = "0.6", default-features = false, features = [
-  "deflate",
+    "deflate",
 ], optional = true }
 zip8 = { package = "zip", version = "8", default-features = false, features = [
-  "deflate-flate2-zlib-rs",
+    "deflate-flate2-zlib-rs",
 ], optional = true }
 tokio = { version = "1", features = ["fs", "io-util"] }
 reqwest = { version = "0.12", default-features = false, features = ["json"] }
